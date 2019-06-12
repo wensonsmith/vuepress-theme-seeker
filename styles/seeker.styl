@@ -1,0 +1,98 @@
+.hero
+  height 75vh
+  min-height  75vh
+
+.logo
+  display  flex
+  &__image
+    width  80px
+    margin-right  10px
+    > img {
+      width  100%
+    }
+  &__desc
+    color  white
+    padding-top  5px
+    &-title
+      font-size  2em
+.nav
+  display  flex
+  justify-content  space-between    
+
+.pagination
+  display  flex
+  justify-content  center
+
+  &__item
+    border  1px solid #f2f2f2
+    height 35px
+    width 35px
+    line-height  35px
+    text-align  center
+    & hover
+      background-color  #f7f7f7
+
+.read-more
+  font-size 12px
+  color  #666
+  background: linear-gradient(120deg, #ffffff 50%, $readMoreBgColor 0%);
+  padding 5px 15px
+  border-left: 2px solid $readMoreBgColor
+
+.posts-list
+  margin  30px 0
+  .article-meta, .article-meta a
+    line-height 2.5em
+    font-size 14px
+    color $textColorLighter
+
+  .article-tags
+    background: linear-gradient(120deg, #ffffff 50%, $readMoreBgColor 0%);
+    padding 2px 5px
+    margin-left: 15px
+    font-size: 16px
+    
+  .article-title
+    font-size 1.5em
+    font-weight  300
+    
+  .article-createtime
+    font-size 14px
+  
+  .article-summary
+    color: lighten($textColor, 30%)
+
+.footer
+  margin-top 50px
+  
+  &-top
+    display: flex
+    min-height: 30px
+    &__left
+      flex: 1
+      background-color: rgba(255,255,255,0.7)
+    > .content
+      padding 1.2em 0
+      display: flex
+      background-color: rgba(255,255,255,0.7)
+      .slogan
+        flex 1
+      .copyright
+        flex 1
+        text-align right
+    &__right
+      flex: 1
+      background-color: rgba(255,255,255,0.7)
+      
+  &-bottom
+    // background-color darken($footerBgColor, 10%)
+    min-height: 150px
+    text-align center
+    position relative
+
+  .theme-info
+    position: absolute
+    bottom: 5px
+    color #ffffff 
+    font-size 12px
+    width: 100%
