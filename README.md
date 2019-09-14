@@ -1,6 +1,12 @@
 # Seeker
 Vuepress blog theme
 
+自带以下插件：
+
+"@vuepress/plugin-blog": "^1.2.4",
+"@vuepress/plugin-medium-zoom": "^1.0.2",
+"@vuepress/plugin-pagination": "^1.0.0-alpha.30",
+
 ## install
 
 ```bash

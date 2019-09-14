@@ -7,13 +7,12 @@ export default {
   name: "CreateTime",
   props: {
     datetime: {
-      type: String,
-      required: true
+      type: String
     }
   },
   computed: {
     dateString() {
-      return this.friendlyTime(new Date(this.datetime))
+      return this.datetime ? this.friendlyTime(new Date(this.datetime)) : 'lost time'
     }
   },
   methods: {

@@ -1,11 +1,20 @@
 {
   "name": "vuepress-theme-seeker",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A vuepress theme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@vuepress/plugin-blog": "^1.2.4",
+    "@vuepress/plugin-medium-zoom": "^1.0.2",
+    "@vuepress/plugin-google-analytics": "^1.0.2",
+    "@vuepress/plugin-last-updated":"^1.0.2"
+  },
+  "devDependencies": {
+    "vuepress": "^1.0.2"
+  }
 }

@@ -16,7 +16,7 @@ import {
     isMailto,
     isTel,
     ensureExt
-} from '../util'
+} from '@theme/util'
 
 export default {
     props: {

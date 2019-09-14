@@ -1,39 +1,24 @@
 <template>
-  <div class="layout">
-    <Hero/>
-    <div class="page">
-      <div class="page-left"></div>
-      <div class="page-center content">
-        <List/>
-        <Pagination/>
-      </div>
-      <div class="page-right"></div>
-    </div>
-    <Footer/>
-  </div>
+  <Framework>
+    <PostList />
+    <Pagination prev-text="上一页" next-text="下一页" slot="pagination"/>
+  </Framework>
 </template>
 
 <script>
-import Hero from "../components/Hero.vue";
-import List from "../components/List.vue";
-import Page from "../components/Page.vue";
-import Footer from "../components/Footer.vue";
-import Pagination from "../components/Pagination.vue";
+import Framework from '@theme/components/Framework.vue'
+import PostList from '@theme/components/PostList.vue'
 
 export default {
   name: "Layout",
   components: {
-    Hero,
-    List,
-    Page,
-    Footer,
-    Pagination
+    Framework,
+    PostList,
+    Pagination: () => import(/* webpackChunkName = "Pagination" */ '@theme/components/Pagination.vue'),
   },
   created() {
-    console.log(this.$pagination);
+    // console.log(this.$pagination);
   }
 };
 </script>
 
-<style src="prismjs/themes/prism-okaidia.css"></style>
-<style src="../styles/theme.styl" lang="stylus"></style>

@@ -1,5 +1,5 @@
 <template>
-<nav class="nav-links" v-if="userLinks.length || repoLink">
+<nav class="nav-links" v-if="userLinks.length">
     <!-- user links -->
     <div class="nav-links__item" v-for="item in userLinks" :key="item.link">
         <DropdownLink v-if="item.type === 'links'" :item="item" />
@@ -10,7 +10,7 @@
 
 <script>
 import DropdownLink from './DropdownLink.vue'
-import { resolveNavLinkItem } from '../util'
+import { resolveNavLinkItem } from '@theme/util'
 import NavLink from './NavLink.vue'
 
 export default {
@@ -52,7 +52,6 @@ export default {
                 }
                 return [...this.userNav, languageDropdown]
             }
-            console.log(this.userNav)
             return this.userNav
         },
 
@@ -62,8 +61,6 @@ export default {
                     items: (link.items || []).map(resolveNavLinkItem)
                 })
             })
-
-            console.log(userLinks)
             return userLinks;
         },
     }

@@ -4,7 +4,7 @@
     padding 0.25rem 0.5rem
     margin 0
     font-size 0.85em
-    background-color rgba(27,31,35,0.05)
+    background-color $codeBgColor
     .token
       &.deleted
         color #EC5975
@@ -19,7 +19,8 @@
     background-color $codeBgColor
     overflow auto
     code
-      color #fff
+      font-family: 'Roboto Mono', monospace;
+      color #F8F8F2
       padding 0
       background-color transparent
       border-radius 0
@@ -94,6 +95,242 @@ div[class*="language-"]
       border-right 1px solid rgba(0, 0, 0, 66%)
       background-color $codeBgColor
 
+// .token.comment,
+// .token.block-comment,
+// .token.prolog,
+// .token.doctype,
+// .token.cdata {
+// 	color: #b0bec5;
+// }
+
+// .token.punctuation {
+// 	color: #F8F8F2;
+// }
+
+// .token.number
+//   color #C5A3FF
+// .token.property,
+// .token.tag,
+// .token.boolean,
+// .token.function-name,
+// .token.constant,
+// .token.symbol,
+// .token.deleted {
+// 	color: #F8F8F2;
+// }
+
+// .token.selector,
+// .token.attr-name,
+// .token.string,
+// .token.char,
+// .token.function,
+// .token.builtin,
+// .token.inserted {
+// 	color: #ceb1ff;
+// }
+
+// .token.operator
+//   color #FFB8D1;
+// .token.entity,
+// .token.url,
+// .token.variable {
+// 	color: #F8F8F2;
+// }
+
+// .token.atrule,
+// .token.attr-value,
+// .token.keyword,
+// .token.class-name {
+// 	color: #C2FFDF;
+// }
+
+// .token.regex,
+// .token.important {
+// 	color: #1bc5e0;
+// }
+
+// .language-css .token.string,
+// .style .token.string {
+// 	color: #1bc5e0;
+// }
+
+// .token.important {
+// 	font-weight: normal;
+// }
+
+// .token.bold {
+// 	font-weight: bold;
+// }
+// .token.italic {
+// 	font-style: italic;
+// }
+
+// .token.entity {
+// 	cursor: help;
+// }
+
+// .namespace {
+// 	opacity: .7;
+// }
+
+// @media screen and (max-width: 767px) {
+// 	pre[class*="language-"]:before,
+// 	pre[class*="language-"]:after {
+// 		bottom: 14px;
+// 		box-shadow: none;
+// 	}
+
+// }
+
+// /* Plugin styles */
+// .token.tab:not(:empty):before,
+// .token.cr:before,
+// .token.lf:before {
+// 	color: #e0d7d1;
+// }
+
+/*
+ * Synthwave '84 Theme originally by Robb Owen [@Robb0wen] for Visual Studio Code
+ * Demo: https://marc.dev/demo/prism-synthwave84
+ *
+ * Ported for PrismJS by Marc Backes [@themarcba]
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f92aad;
+	text-shadow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre)>code[class*="language-"],
+pre[class*="language-"] {
+	background-color: transparent !important;
+	background-image: linear-gradient(to bottom, #2a2139 75%, #34294f);
+}
+
+/* Inline code */
+:not(pre)>code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8e8e8e;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.number,
+.token.unit,
+.token.hexcode,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.property,
+.token.selector {
+	color: #72f1b8;
+	text-shadow: 0 0 2px #100c0f, 0 0 10px #257c5575, 0 0 35px #21272475;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.selector .token.id,
+.token.function {
+	color: #fdfdfd;
+	text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975;
+
+}
+
+.token.class-name {
+	color: #fff5f6;
+	text-shadow: 0 0 2px #000, 0 0 10px #fc1f2c75, 0 0 5px #fc1f2c75, 0 0 25px #fc1f2c75;
+}
+
+.token.constant,
+.token.symbol {
+	color: #f92aad;
+	text-shadow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
+}
+
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.selector .token.class,
+.token.builtin {
+	color: #f4eee4;
+	text-shadow: 0 0 2px #393a33, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #f87c32;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
+}
 
 for lang in $codeLang
   div{'[class~="language-' + lang + '"]'}

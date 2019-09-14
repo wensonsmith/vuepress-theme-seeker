@@ -1,6 +1,6 @@
 <template>
 <div>
-    <Content />
+    <Content/>
     <div class="last-updated" v-if="lastUpdated">
         <span class="prefix">{{ lastUpdatedText }}: </span>
         <span class="time">{{ lastUpdated }}</span>
@@ -15,16 +15,16 @@ export default {
         lastUpdated() {
             return this.$page.lastUpdated
         },
-
         lastUpdatedText() {
-            if (typeof this.$themeLocaleConfig.lastUpdated === 'string') {
-                return this.$themeLocaleConfig.lastUpdated
+            if (typeof this.$themeConfig.lastUpdated === 'string') {
+                return this.$themeConfig.lastUpdated
             }
-            if (typeof this.$site.themeConfig.lastUpdated === 'string') {
-                return this.$site.themeConfig.lastUpdated
-            }
-            return 'Last Updated'
+
+            return '最近更新'
         },
+    },
+    created() {
+        console.log(this.$page)
     }
 }
 </script>
