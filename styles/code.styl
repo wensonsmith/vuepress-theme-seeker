@@ -28,14 +28,14 @@ div[class*="language-"]
   background-color $codeBgColor
   .highlight-lines
     user-select none
-    padding-top 1.3rem
+    padding-top 1.2rem
     position absolute
     top 0
     left 0
     width 100%
-    line-height 1.5
+    line-height 1.7
     .highlighted
-      background-color rgba(0, 0, 0, 66%)
+      background-color rgba(32, 29, 41, 0.32)
   &::before
     position absolute
     z-index 3
@@ -58,25 +58,25 @@ div[class*="language-"]
           display block
           width $lineNumbersWrapperWidth
           height 100%
-          background-color rgba(0, 0, 0, 66%)
+          background-color rgba(32, 29, 41, 0.32)
     pre
       padding-left $lineNumbersWrapperWidth + 1 rem
       vertical-align middle
     .line-numbers-wrapper
       position absolute
-      top 0
+      top -3px
       width $lineNumbersWrapperWidth
       text-align center
       color rgba(255, 255, 255, 0.3)
       padding 1.25rem 0
-      line-height 1.4
       br
         user-select none
       .line-number
         position relative
         z-index 4
         user-select none
-        font-size 0.85em
+        line-height 2
+        font-size: 0.9em
     &::after
       content ''
       position absolute
@@ -86,7 +86,7 @@ div[class*="language-"]
       width $lineNumbersWrapperWidth
       height 100%
       border-radius 6px 0 0 6px
-      border-right 1px solid rgba(0, 0, 0, 66%)
+      border-right 1px solid rgb(82, 74, 107)
       background-color $codeBgColor
 
 for lang in $codeLang
