@@ -6,11 +6,10 @@
         <div class="page-left"></div>
         <div class="page-center content">
           <slot></slot>
+          <slot name="pagination"/>
         </div>
         <div class="page-right"></div>
       </div>
-
-      <slot name="pagination"/>
     </div>
     <Footer/>
   </div>
