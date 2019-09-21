@@ -5,17 +5,23 @@
                 <BackButton></BackButton>
             </div>
             <div class="page-header__title">
-                <h1 style="display: inline-block" v-text="$page.title"></h1>
-                <CreateTime style="float:right" :datetime="$page.frontmatter.date"></CreateTime>
+                <h1 v-text="$page.title"></h1>
+                <div class="tags-wrapper">
+                    <Tags :tags="$frontmatter.tags"/>
+                </div>
             </div>
-            <div class="page-header__meta"></div>
+            <div class="page-header__meta">
+                <span class="meta__item">
+                    <i class="iconfont">&#xe614;</i>日期
+                    <CreateTime :datetime="$page.frontmatter.date"></CreateTime>
+                </span>
+                <span class="meta__item">
+                    <i class="iconfont">&#xe674;</i>
+                    <span>阅读量 123</span>
+                </span>
+            </div>
         </header>
-        
-        <div class="tags">
-            <router-link  v-for="tag of $frontmatter.tags" :key="tag" :to="`/tags/${tag}`">
-                <span class="tag" v-text="tag"></span>
-            </router-link>
-        </div>
+        <br><br>
         <ArticleDetail/>
     </framework> 
 </template>
@@ -31,6 +37,7 @@ export default {
         ArticleDetail,
         CreateTime: () => import(/* webpackChunkName = "CreateTime" */ '@theme/components/CreateTime.vue'),
         BackButton: () => import(/* webpackChunkName = "BackButton" */ '@theme/components/BackButton.vue'),
+        Tags: () => import(/* webpackChunkName = "Tags" */ '@theme/components/Tags.vue'),
     },
     created() {
         console.log(this)
@@ -39,5 +46,18 @@ export default {
 </script>
 
 .<style lang="stylus">
+@require '../styles/config'
 
+.page-header
+    &__title
+        display flex
+        > h1
+            flex 1
+        > .tags-wrapper
+            display flex
+            align-items center
+    &__meta
+        color $textColorLighter
+        .meta__item
+            margin-right 1em
 </style>

@@ -8,6 +8,10 @@ export default {
   props: {
     datetime: {
       type: String
+    },
+    showTime: {
+      type: Boolean,
+      default: false,
     }
   },
   computed: {
@@ -19,6 +23,7 @@ export default {
     friendlyTime(date) {
       // Make a fuzzy time
       let delta = Math.round((+new Date() - date) / 1000)
+      console.log('delta', delta)
 
       let minute = 60,
         hour = minute * 60,
@@ -42,7 +47,11 @@ export default {
       } else if (delta < day * 2) {
         fuzzy = "昨天"
       } else {
-        fuzzy = date.toISOString().slice(0, 10)
+        const ISOString = date.toISOString()
+        fuzzy = ISOString.slice(0, 10)
+        if (this.showTime) {
+          fuzzy += ' ' + ISOString.substr(11, 8)
+        }
       }
 
       return fuzzy

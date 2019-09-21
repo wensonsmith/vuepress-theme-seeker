@@ -3,7 +3,7 @@
     <Content/>
     <div class="last-updated" v-if="lastUpdated">
         <span class="prefix">{{ lastUpdatedText }}: </span>
-        <span class="time">{{ lastUpdated }}</span>
+        <CreateTime :datetime="lastUpdated" :showTime="true"/>
     </div>
 </div>
 </template>
@@ -23,9 +23,15 @@ export default {
             return '最近更新'
         },
     },
-    created() {
-        console.log(this.$page)
-    }
+    components: {
+        CreateTime: () => import(/* webpackChunkName = "CreateTime" */ '@theme/components/CreateTime.vue'),
+    },
 }
 </script>
 
+<style lang="stylus">
+@require '../styles/config'
+.last-updated
+    color $textColorLighter
+    text-align right 
+</style>

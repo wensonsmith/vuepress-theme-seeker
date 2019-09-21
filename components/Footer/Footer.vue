@@ -10,7 +10,7 @@
           <span v-text="poetry.origin.author"></span>
         </div>
         <div class="social-icons">
-          <img v-for="network of social" :key="network.type" :src="icons[network.type]" :alt="network.type">
+          <i class="iconfont" v-for="network of social" :key="network.type" v-html="icons[network.type]"></i>
         </div>
         
       </div>
@@ -31,13 +31,6 @@
 
 <script>
 import Gradients from '@theme/util/gradient'
-import qq from '@theme/public/images/icons/qq.png'
-import bilibili from '@theme/public/images/icons/bilibili.png'
-import github from '@theme/public/images/icons/github.png'
-import rss from '@theme/public/images/icons/rss.png'
-import wechat from '@theme/public/images/icons/wechat.png'
-import weibo from '@theme/public/images/icons/weibo.png'
-
 
 export default {
   name: "Footer",
@@ -45,12 +38,12 @@ export default {
     return {
       poetry: undefined,
       icons: {
-        qq,
-        bilibili,
-        github,
-        rss,
-        wechat,
-        weibo,
+        qq:'&#xf216;',
+        bilibili:'&#xe6b4;',
+        github: '&#xe741;',
+        rss: '&#xe6ee;',
+        wechat: '&#xe759;',
+        weibo: '&#xe62d;',
       }
     };
   },
@@ -128,9 +121,11 @@ export default {
         text-align right
         justify-content: flex-end
         height 60px
-        img 
-          height 30px
-          margin 15px 10px
+        i 
+          line-height: 60px;
+          font-size: 25px;
+          padding: 0 0.5em;
+          color: slategray;
     &__right
       flex: 1
       background-color: rgba(255,255,255,0.7)

@@ -1,12 +1,14 @@
 <template>
     <Framework>
+        <BackButton/>
         <h1>归档</h1>
+        <br/>
         <div v-for="year of Object.keys(archive).reverse()" :key="year">
             <h3 v-text="year"></h3>
             <p v-for="post of archive[year]" :key="post.key" >
-                
-                <router-link :to="post.path">
+                <router-link class="archive-post" :to="post.path">
                     <CreateTime :datetime="post.frontmatter.date || post.lastUpdated"/>
+                    <span class="divider">/</span>
                     <span v-text="post.title"></span>
                 </router-link>
             </p>
@@ -20,6 +22,7 @@ export default {
     components: {
         Framework,
         CreateTime: () => import(/* webpackChunkName = "CreateTime" */ '@theme/components/CreateTime.vue'),
+        BackButton: () => import(/* webpackChunkName = "BackButton" */ '@theme/components/BackButton.vue'),
     },
     computed: {
         archive() {
@@ -62,3 +65,31 @@ export default {
 }
 </script>
 
+<style lang="stylus">
+@require '../styles/config'
+.divider
+    color $decorationColor
+    padding 0 5px
+.archive-post
+    animation hoverMotionReverse 300ms forwards
+    &:hover
+        animation hoverMotion 300ms forwards
+
+@keyframes hoverMotion {
+    from {
+        margin-left 0
+    }
+    to {
+        margin-left 1em
+    }
+}
+
+@keyframes hoverMotionReverse {
+    from {
+        margin-left 1em
+    }
+    to {
+        margin-left 0
+    }
+}
+</style>
