@@ -1,8 +1,8 @@
 <template>
 <div>
     <Content/>
-    <div class="last-updated" v-if="lastUpdated">
-        <span class="prefix">{{ lastUpdatedText }}: </span>
+    <div class="last-updated" v-if="false">
+        <span class="prefix">{{ lastUpdatedText }}</span>
         <CreateTime :datetime="lastUpdated" :showTime="true"/>
     </div>
 </div>
@@ -33,5 +33,4 @@ export default {
 @require '../styles/config'
 .last-updated
     color $textColorLighter
-    text-align right 
 </style>

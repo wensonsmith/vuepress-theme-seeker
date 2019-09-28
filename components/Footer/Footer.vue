@@ -1,141 +1,130 @@
 <template>
-  <div :class="['footer', gradient.class]">
-    <div class="footer-top">
-        <div class="footer-top__left"></div>
-      <div class="content">
-        <div class="slogan" v-if="slogan" v-text="slogan"></div>
-        <div class="slogan" v-else-if="poetry">
-          <span  v-text="poetry.content"></span>
-          BY
-          <span v-text="poetry.origin.author"></span>
+  <div class="footer">
+    <div class="footer__container">
+      <div class="page-left"></div>
+      <div class="page-center">
+        <div class="slogan" v-if="dynamicSlogan">
+          <div class="poetry__content" v-text="dynamicSlogan.content"></div>
+          <span class="poetry__meta">《{{dynamicSlogan.origin.title}}》· <span v-text="dynamicSlogan.origin.author"></span></span>          
         </div>
+        <div class="slogan" v-else v-text="slogan"></div>
+
         <div class="social-icons">
-          <i class="iconfont" v-for="network of social" :key="network.type" v-html="icons[network.type]"></i>
+          <i
+            class="iconfont"
+            v-for="network of social"
+            :key="network.type"
+            v-html="icons[network.type]"
+          ></i>
         </div>
-        
       </div>
-      <div class="footer-top__right"></div>
+      <div class="page-right"></div>
+      <div :class="['footer__shadow', gradient.class]"></div>
     </div>
-      <section class="footer__bottom">
-        <div class="">
-          <div class="footer__card">
-          </div>
-          <div class="footer__nav"></div>
-          <div class="footer__copy">
-            <div class="copyright" v-if="copyright">{{copyright}}</div>
-          </div>
-        </div>
-      </section>
+    <div class="footer__copyright" v-text="copyright"></div>
   </div>
 </template>
 
 <script>
-import Gradients from '@theme/util/gradient'
+import Gradients from "@theme/util/gradient";
+import Poetry from "@theme/util/poetry";
 
 export default {
   name: "Footer",
   data() {
     return {
-      poetry: undefined,
+      slogan: undefined,
+      dynamicSlogan: undefined,
       icons: {
-        qq:'&#xf216;',
-        bilibili:'&#xe6b4;',
-        github: '&#xe741;',
-        rss: '&#xe6ee;',
-        wechat: '&#xe759;',
-        weibo: '&#xe62d;',
+        qq: "&#xf216;",
+        bilibili: "&#xe6b4;",
+        github: "&#xe741;",
+        rss: "&#xe6ee;",
+        wechat: "&#xe759;",
+        weibo: "&#xe62d;"
       }
     };
   },
   computed: {
-    slogan() {
-      return this.$site.themeConfig.footer.slogan || this.todayPoetry();
-    },
     copyright() {
-      return this.$site.themeConfig.footer.copyright
+      return this.$site.themeConfig.footer.copyright;
     },
     gradient() {
-      return Gradients.className
+      return Gradients.className;
     },
     social() {
-      console.log(this.$site.themeConfig.footer)
-      return this.$site.themeConfig.footer.social || []
+      return this.$site.themeConfig.footer.social || [];
     }
   },
-  methods: {
-    fetchToken() {
-      return fetch("https://v2.jinrishici.com/token")
-        .then(data => {
-          return data.json();
-        })
-        .then(response => {
-          window.localStorage.setItem("SEEKER_POETRY_TOKEN", response.data);
-          Promise.resolve(response.data);
-        });
-    },
-    todayPoetry() {
-      let token = window.localStorage.getItem("SEEKER_POETRY_TOKEN");
-      if (token) {
-        this.fetchPoetry(token);
-      } else {
-        this.fetchToken().then(token => {
-          this.fetchToken(token);
-        });
-      }
-    },
-    fetchPoetry(token) {
-      fetch(
-        "https://v2.jinrishici.com/one.json?X-User-Token=" +
-          encodeURIComponent(token)
-      )
-        .then(data => {
-          return data.json();
-        })
-        .then(response => {
-          this.poetry = response.data;
-        });
+  created() {
+    const slogan = this.$site.themeConfig.footer.slogan;
+
+    if (slogan === "poetry") {
+      return Poetry.todayPoetry().then(poetry => { this.dynamicSlogan = poetry; });
     }
-  },
+
+    if (slogan === "yiyan") {
+      return;
+    }
+
+    this.slogan = slogan;
+  }
 };
 </script>
 
 <style lang="stylus">
-@require '../../styles/config'
-  
-.footer
-  &-top
-    display: flex
-    min-height: 30px
-    &__left
-      flex: 1
-      background-color: rgba(255,255,255,0.7)
-    > .content
-      padding 0
-      display: flex
-      background-color: rgba(255,255,255,0.7)
-      .slogan
-        flex 1
-        line-height: 60px;
-      .social-icons
-        flex 1
-        text-align right
-        justify-content: flex-end
-        height 60px
-        i 
-          line-height: 60px;
-          font-size: 25px;
-          padding: 0 0.5em;
-          color: slategray;
-    &__right
-      flex: 1
-      background-color: rgba(255,255,255,0.7)
-      
-  &__bottom
-    // background-color darken($footerBgColor, 10%)
-    min-height: 150px
-    text-align center
-    position relative
-    background-color: rgba(38, 54, 71, 0.6)
-    padding: 50px 0
-</style>
+@require '../../styles/config';
 
+.footer
+  &__container
+    position: relative;
+    display: flex;
+
+    > .page-left
+      background-color: white;
+      z-index: 2;
+
+    > .page-center
+      background-color: white;
+      z-index: 2;
+      min-height: 150px;
+      padding: 3em;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content space-between
+
+      .poetry__content
+        font-size 1.3em
+        line-height 2.5em
+
+      .poetry__meta
+        color $textColorLighter;
+        font-size 13px
+
+    > .page-right
+      background-color: $containerBgColor;
+
+  &__copyright
+    font-size: 12px;
+    color: $textColorLighter;
+    text-align: center;
+    padding: 80px 0 20px 0;
+    background-color: $containerBgColor;
+
+  &__shadow
+    width: 85%;
+    position: absolute;
+    min-height: 150px;
+    padding: 3em;
+    left: 0px;
+    bottom: -45px;
+    background-color: #f87654;
+
+  .social-icons
+    .iconfont
+      font-size 1.5em
+      margin-left 1em
+      color $textColor
+
+</style>

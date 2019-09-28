@@ -37,9 +37,6 @@ export default {
         Framework,
         BackButton: () => import(/* webpackChunkName = "BackButton" */ '@theme/components/BackButton.vue'),
     },
-    created(){
-        console.log(this)
-    }
 }
 </script>
 

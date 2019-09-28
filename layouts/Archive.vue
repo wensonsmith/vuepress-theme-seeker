@@ -45,17 +45,12 @@ export default {
 
             
             return posts
-            console.log('posts', posts)
         }
-    },
-    created() {
-        console.log(this)
     },
     methods: {
         calculateDate(post) {
             if (post.frontmatter.date) {
                 let date = new Date(post.frontmatter.date)
-                console.log(date.getFullYear())
                 return date
             }
 

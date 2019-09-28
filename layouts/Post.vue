@@ -12,12 +12,12 @@
             </div>
             <div class="page-header__meta">
                 <span class="meta__item">
-                    <i class="iconfont">&#xe614;</i>日期
+                    <i class="iconfont">&#xe614;</i> 
                     <CreateTime :datetime="$page.frontmatter.date"></CreateTime>
                 </span>
                 <span class="meta__item">
                     <i class="iconfont">&#xe674;</i>
-                    <span>阅读量 123</span>
+                    <span> 123</span>
                 </span>
             </div>
         </header>
@@ -39,9 +39,6 @@ export default {
         BackButton: () => import(/* webpackChunkName = "BackButton" */ '@theme/components/BackButton.vue'),
         Tags: () => import(/* webpackChunkName = "Tags" */ '@theme/components/Tags.vue'),
     },
-    created() {
-        console.log(this)
-    }
 }
 </script>
 
@@ -60,4 +57,6 @@ export default {
         color $textColorLighter
         .meta__item
             margin-right 1em
+            > .iconfont
+                margin-right 5px
 </style>

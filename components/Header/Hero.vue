@@ -4,7 +4,7 @@
         <div class="content nav">
             <router-link to="/" class="logo">
                 <div class="logo__image">
-                    <img v-if="$site.themeConfig.logo" :src="$withBase($site.themeConfig.logo)" alt="志我">
+                    <img v-if="$site.themeConfig.logo" :src="$withBase($site.themeConfig.logo)" alt="wenson-logo">
                 </div>
                 <div class="logo__desc">
                     <div class="logo__desc-title">{{$site.title}}</div>
@@ -49,8 +49,9 @@ export default {
   align-items center
 
   &__image
-    width  80px
+    width  70px
     margin-right  10px
+    margin-bottom -10px
     > img {
       width  100%
     }
@@ -58,8 +59,14 @@ export default {
     color  white
     padding-top  5px
     &-title
-      font-size  1.5em
+      font-size  2.5em
       padding: 0.5rem 0
+      font-family: 'HanWang';
+      opacity 0.9
+    &-subtitle
+      font-size 12px
+      opacity 0.8
+
 
 .nav
   display  flex

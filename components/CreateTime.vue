@@ -23,7 +23,6 @@ export default {
     friendlyTime(date) {
       // Make a fuzzy time
       let delta = Math.round((+new Date() - date) / 1000)
-      console.log('delta', delta)
 
       let minute = 60,
         hour = minute * 60,

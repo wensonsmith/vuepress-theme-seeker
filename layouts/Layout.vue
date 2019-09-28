@@ -16,9 +16,6 @@ export default {
     PostList,
     Pagination: () => import(/* webpackChunkName = "Pagination" */ '@theme/components/Pagination.vue'),
   },
-  created() {
-    // console.log(this.$pagination);
-  }
 };
 </script>
 

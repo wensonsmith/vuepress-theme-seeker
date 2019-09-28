@@ -16,7 +16,6 @@ import MurmurCard from "./cards/MurmurCard.vue";
 export default {
   name: "List",
   created() {
-    console.log(this, 'pagination');
   },
   components: {ArticleCard, AlbumCard, MurmurCard}
 };

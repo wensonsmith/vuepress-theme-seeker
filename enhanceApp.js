@@ -19,7 +19,7 @@ export default ({
   const defaultThemeConfig = {
     lastUpdated: '最后更新',
     footer: {
-      slogan: 'world',
+      slogan: 'poetry',
       copyright: 'vuepress theme seeker @ 2019'
     },
   }
