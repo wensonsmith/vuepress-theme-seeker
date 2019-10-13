@@ -5,7 +5,6 @@
 <script>
 export default {
     mounted() {
-        console.log(this.$site)
         setTimeout(() => {
             new Valine({
                 el: '#comments',
