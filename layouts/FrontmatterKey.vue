@@ -62,6 +62,7 @@ export default {
         align-items center
 
 .tags
+    padding-top 1.5em
     &__item
         margin 10px
         display inline-flex

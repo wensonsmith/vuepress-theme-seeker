@@ -1,8 +1,82 @@
 <template>
     <Framework>
-        <BackButton/>
-        <h1>关于我</h1>
-        <br/>
+        <div class="about">
+            <BackButton/>
+            <div class="about-content">
+                <div class="about-content__left">
+                    <div>
+                        <img src="/ws-avatar.png"/>
+                    </div>
+                </div>
+                <div class="about-content__right">
+                    
+                    <div class="friends clearfix">
+                        <div class="friends__title">小伙伴</div>
+                        <div class="friends__item">
+                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
+                            <div class="friends__item-link">
+                                <div class="title">莫不是条咸鱼</div>
+                                <div class="desc">一条咸鱼的自传</div>
+                            </div>
+                        </div>
+
+                        <div class="friends__item">
+                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
+                            <div class="friends__item-link">
+                                <div class="title">莫不是条咸鱼</div>
+                                <div class="desc">一条咸鱼的自传</div>
+                            </div>
+                        </div>
+
+                        <div class="friends__item">
+                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
+                            <div class="friends__item-link">
+                                <div class="title">莫不是条咸鱼</div>
+                                <div class="desc">一条咸鱼的自传</div>
+                            </div>
+                        </div>
+
+                        <div class="friends__item">
+                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
+                            <div class="friends__item-link">
+                                <div class="title">莫不是条咸鱼</div>
+                                <div class="desc">一条咸鱼的自传</div>
+                            </div>
+                        </div>
+
+                        <div class="friends__item">
+                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
+                            <div class="friends__item-link">
+                                <div class="title">莫不是条咸鱼</div>
+                                <div class="desc">一条咸鱼的自传</div>
+                            </div>
+                        </div>
+
+                        <div class="friends__item">
+                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
+                            <div class="friends__item-link">
+                                <div class="title">莫不是条咸鱼</div>
+                                <div class="desc">一条咸鱼的自传</div>
+                            </div>
+                        </div>
+
+                        <div class="friends__item">
+                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
+                            <div class="friends__item-link">
+                                <div class="title">莫不是条咸鱼</div>
+                                <div class="desc">一条咸鱼的自传</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-detail" style="margin-top: 70vh">
+            <Content />
+        </div>
+
+        <Comment slot="comment"></Comment>
     </Framework>
 </template>
 
@@ -11,8 +85,73 @@ import Framework from '@theme/components/Framework.vue'
 export default {
     components: {
         Framework,
-        CreateTime: () => import(/* webpackChunkName = "CreateTime" */ '@theme/components/CreateTime.vue'),
         BackButton: () => import(/* webpackChunkName = "BackButton" */ '@theme/components/BackButton.vue'),
+        Comment: () => import(/* webpackChunkName = "CreateTime" */ '@theme/components/Comment.vue'),
     },
 }
 </script>
+
+<style lang="stylus">
+@require '../styles/config';
+
+.about
+    position relative
+    margin: -3em;
+
+    > .back-button
+        position absolute
+        top 30px
+        left 30px
+        color white
+        z-index 2
+
+    &-content
+        z-index 1
+        position absolute
+        width 120%
+        display flex
+        top 0
+        left 0
+        border-bottom 1px solid $textColorLighter
+        
+        &__left
+            width 30%;
+            background-color $codeBgColor
+            min-height 50vh
+            padding 3em
+
+            > div
+                text-align center
+        &__right
+            flex: 1 0
+
+    .friends
+        background-color $containerBgColor
+        height: 50vh;
+        margin-top: 5vh;
+        padding: 1em 2em;
+        margin-left: -5em;
+        overflow scroll
+
+        &__title
+            padding 1em 
+
+        &__item
+            padding 1em
+            background-color white
+            width 155px
+            height 40px
+            margin: 10px
+            float left
+            display flex
+            &-img
+                width 40px
+            &-link
+                margin-left 1em
+                overflow hidden
+                > .desc
+                    font-size 12px
+                    line-height 2.5em
+                    color $textColorLighter
+                
+</style>

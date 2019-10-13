@@ -61,7 +61,6 @@ export default {
     &-title
       font-size  2.5em
       padding: 0.5rem 0
-      font-family: 'HanWang';
       opacity 0.9
     &-subtitle
       font-size 12px

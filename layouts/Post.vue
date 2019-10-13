@@ -15,14 +15,15 @@
                     <i class="iconfont">&#xe614;</i> 
                     <CreateTime :datetime="$page.frontmatter.date"></CreateTime>
                 </span>
-                <span class="meta__item">
+                <span :id="$page.path" class="leancloud_visitors meta__item" :data-flag-title="$page.title">
                     <i class="iconfont">&#xe674;</i>
-                    <span> 123</span>
+                    <i class="leancloud-visitors-count"></i>
                 </span>
             </div>
         </header>
         <br><br>
         <ArticleDetail/>
+        <Comment slot="comment"></Comment>
     </framework> 
 </template>
 
@@ -38,6 +39,7 @@ export default {
         CreateTime: () => import(/* webpackChunkName = "CreateTime" */ '@theme/components/CreateTime.vue'),
         BackButton: () => import(/* webpackChunkName = "BackButton" */ '@theme/components/BackButton.vue'),
         Tags: () => import(/* webpackChunkName = "Tags" */ '@theme/components/Tags.vue'),
+        Comment: () => import(/* webpackChunkName = "CreateTime" */ '@theme/components/Comment.vue'),
     },
 }
 </script>

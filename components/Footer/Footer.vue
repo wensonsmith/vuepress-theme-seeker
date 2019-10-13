@@ -3,12 +3,11 @@
     <div class="footer__container">
       <div class="page-left"></div>
       <div class="page-center">
+        <div class="slogan" v-if="slogan" v-text="slogan"></div>
         <div class="slogan" v-if="dynamicSlogan">
           <div class="poetry__content" v-text="dynamicSlogan.content"></div>
           <span class="poetry__meta">《{{dynamicSlogan.origin.title}}》· <span v-text="dynamicSlogan.origin.author"></span></span>          
         </div>
-        <div class="slogan" v-else v-text="slogan"></div>
-
         <div class="social-icons">
           <i
             class="iconfont"
@@ -27,13 +26,11 @@
 
 <script>
 import Gradients from "@theme/util/gradient";
-import Poetry from "@theme/util/poetry";
 
 export default {
   name: "Footer",
   data() {
     return {
-      slogan: undefined,
       dynamicSlogan: undefined,
       icons: {
         qq: "&#xf216;",
@@ -54,20 +51,50 @@ export default {
     },
     social() {
       return this.$site.themeConfig.footer.social || [];
+    },
+    slogan() {
+      const slogan = this.$site.themeConfig.footer.slogan;
+      if (slogan === "poetry") {
+        this.todayPoetry();
+        return false;
+      }
+
+      if (slogan === "yiyan") {
+        return false;
+      }
+
+      return slogan;
     }
   },
-  created() {
-    const slogan = this.$site.themeConfig.footer.slogan;
-
-    if (slogan === "poetry") {
-      return Poetry.todayPoetry().then(poetry => { this.dynamicSlogan = poetry; });
+  methods: {
+    fetchToken() {
+        return fetch("https://v2.jinrishici.com/token").then(data => {
+            return data.json();
+        }).then(response => {
+            window.localStorage.setItem("SEEKER_POETRY_TOKEN", response.data);
+            return Promise.resolve(response.data);
+        });
+    },
+    todayPoetry() {
+        let token = window.localStorage.getItem("SEEKER_POETRY_TOKEN");
+        if (token) {
+            return this.fetchPoetry(token);
+        } else {
+            return this.fetchToken().then(token => {
+                return this.fetchPoetry(token);
+            });
+        }
+    },
+    fetchPoetry(token) {
+        fetch(
+            "https://v2.jinrishici.com/one.json?X-User-Token=" +
+            encodeURIComponent(token)
+        ).then(data => {
+            return data.json();
+        }).then(response => {
+            this.dynamicSlogan = response.data;
+        });
     }
-
-    if (slogan === "yiyan") {
-      return;
-    }
-
-    this.slogan = slogan;
   }
 };
 </script>
