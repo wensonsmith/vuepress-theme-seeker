@@ -1,15 +1,16 @@
 <template>
-    <div id="comments"></div>
+    <div v-if="$site.themeConfig.valine" id="comments"></div>
 </template>
 
 <script>
 export default {
     mounted() {
+        console.log(this.$site)
         setTimeout(() => {
             new Valine({
                 el: '#comments',
-                appId: 'zpYH60z3swFivRMCzdH85xHw-gzGzoHsz',
-                appKey: 'eB05xKa2vXzULbAkaqR2W1EK',
+                appId: this.$site.themeConfig.valine.appId,
+                appKey: this.$site.themeConfig.valine.appKey,
                 visitor: true,
                 recordIP: true,
             })
