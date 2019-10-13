@@ -12,7 +12,9 @@
       </div>
     </div>
     <slot name="comment"></slot>
+    <ClientOnly>
     <Footer/>
+    </ClientOnly>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   </div>
 </template>

@@ -59,11 +59,11 @@ export default {
     color  white
     padding-top  5px
     &-title
-      font-size  2.5em
+      font-size  2em
       padding: 0.5rem 0
       opacity 0.9
     &-subtitle
-      font-size 12px
+      font-size 14px
       opacity 0.8
 
 

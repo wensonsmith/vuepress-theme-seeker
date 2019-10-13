@@ -124,11 +124,13 @@ export default {
                 text-align center
         &__right
             flex: 1 0
+            display flex
+            align-items center
+
 
     .friends
         background-color $containerBgColor
-        height: 50vh;
-        margin-top: 5vh;
+        height: 45vh;
         padding: 1em 2em;
         margin-left: -5em;
         overflow scroll
