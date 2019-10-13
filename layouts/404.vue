@@ -1,9 +1,11 @@
 <template>
-  <div class="theme-container">
-    <div class="content">
+  <div class="container">
+    <div class="not-found">
       <h1>404</h1>
       <blockquote>{{ getMsg() }}</blockquote>
-      <router-link to="/">Take me home.</router-link>
+      <br/>
+      <br/>
+      <router-link to="/" class="home">Take me home</router-link>
     </div>
   </div>
 </template>
@@ -25,4 +27,15 @@ export default {
 }
 </script>
 
-<style src="../styles/index.styl" lang="stylus"></style>
+<style lang="stylus">
+.not-found
+  width 60%
+  margin 10em auto
+.home
+  margin-top 1em
+  padding 1em
+  background-color #6dff9a 
+  cursor pointer
+  &:hover
+    color black
+</style>

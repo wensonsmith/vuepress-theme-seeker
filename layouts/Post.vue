@@ -17,7 +17,7 @@
                 </span>
                 <span :id="$page.path" class="leancloud_visitors meta__item" :data-flag-title="$page.title">
                     <i class="iconfont">&#xe674;</i>
-                    <i class="leancloud-visitors-count"></i>
+                    <i class="leancloud-visitors-count">loading</i>
                 </span>
             </div>
         </header>
