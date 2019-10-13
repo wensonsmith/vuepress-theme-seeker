@@ -9,12 +9,9 @@
           <span class="poetry__meta">《{{dynamicSlogan.origin.title}}》· <span v-text="dynamicSlogan.origin.author"></span></span>          
         </div>
         <div class="social-icons">
-          <i
-            class="iconfont"
-            v-for="network of social"
-            :key="network.type"
-            v-html="icons[network.type]"
-          ></i>
+          <a :href="network.value" v-for="network of social" :key="network.type" target="_blank">
+            <i class="iconfont" v-html="icons[network.type]"></i>
+          </a>
         </div>
       </div>
       <div class="page-right"></div>

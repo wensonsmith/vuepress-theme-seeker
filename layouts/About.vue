@@ -13,58 +13,46 @@
                     <div class="friends clearfix">
                         <div class="friends__title">小伙伴</div>
                         <div class="friends__item">
-                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
+                            <img class="friends__item-img" src="/favicon.ico" alt="">
                             <div class="friends__item-link">
-                                <div class="title">莫不是条咸鱼</div>
-                                <div class="desc">一条咸鱼的自传</div>
+                                <div class="title">小伙伴</div>
+                                <div class="desc">欢迎交换友链~</div>
                             </div>
                         </div>
 
                         <div class="friends__item">
-                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
+                            <img class="friends__item-img" src="/favicon.ico" alt="">
                             <div class="friends__item-link">
-                                <div class="title">莫不是条咸鱼</div>
-                                <div class="desc">一条咸鱼的自传</div>
+                                <div class="title">小伙伴</div>
+                                <div class="desc">欢迎交换友链~</div>
                             </div>
                         </div>
-
                         <div class="friends__item">
-                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
+                            <img class="friends__item-img" src="/favicon.ico" alt="">
                             <div class="friends__item-link">
-                                <div class="title">莫不是条咸鱼</div>
-                                <div class="desc">一条咸鱼的自传</div>
+                                <div class="title">小伙伴</div>
+                                <div class="desc">欢迎交换友链~</div>
                             </div>
                         </div>
-
                         <div class="friends__item">
-                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
+                            <img class="friends__item-img" src="/favicon.ico" alt="">
                             <div class="friends__item-link">
-                                <div class="title">莫不是条咸鱼</div>
-                                <div class="desc">一条咸鱼的自传</div>
+                                <div class="title">小伙伴</div>
+                                <div class="desc">欢迎交换友链~</div>
                             </div>
                         </div>
-
                         <div class="friends__item">
-                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
+                            <img class="friends__item-img" src="/favicon.ico" alt="">
                             <div class="friends__item-link">
-                                <div class="title">莫不是条咸鱼</div>
-                                <div class="desc">一条咸鱼的自传</div>
+                                <div class="title">小伙伴</div>
+                                <div class="desc">欢迎交换友链~</div>
                             </div>
                         </div>
-
                         <div class="friends__item">
-                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
+                            <img class="friends__item-img" src="/favicon.ico" alt="">
                             <div class="friends__item-link">
-                                <div class="title">莫不是条咸鱼</div>
-                                <div class="desc">一条咸鱼的自传</div>
-                            </div>
-                        </div>
-
-                        <div class="friends__item">
-                            <img class="friends__item-img" src="https://blog.t9t.io/favicon/favicon.ico" alt="">
-                            <div class="friends__item-link">
-                                <div class="title">莫不是条咸鱼</div>
-                                <div class="desc">一条咸鱼的自传</div>
+                                <div class="title">小伙伴</div>
+                                <div class="desc">欢迎交换友链~</div>
                             </div>
                         </div>
                     </div>
