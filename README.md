@@ -1,39 +1,25 @@
 # Seeker
-> 一款优雅简洁的 Vuepsress 博客主题 / A Vuepress blog theme 
 
-## 🚧 安装 / Install
+> 一款五彩斑斓的简约 Vuepsress 博客主题  🎊  
+
+演示： [https://iwenson.com](https://iwenson.com)
+
+![screenshots](./screenshots.jpg)
+
+## 🏁 特性
+🌈 多变的颜色，每次刷新随机颜色  
+🗿 页脚随机古诗词  
+🚩 分类及标签支持  
+📥 文章归档  
+👾 评论及阅读量支持  
+⛳️ 自定义导航及社交媒体支持  
+🚧 开发中：文章搜索 / 文章类型 / 文章TOC  
+
+## 🚧 安装
 
 ⚠️ 尚未发布，还不能使用下面命令安装。 可以  git clone 进行使用。
 
-```bash
-npm install vuepress-theme-seeker
-
-# or
-
-yarn add vuepress-theme-seeker
-```
-
-Modify the `/docs/.vuepress/config.js`
-
-```js
-    theme: 'seeker'
-```
-
-## 🏁 特性 / Feature
-✅ 分类 / Category  
-✅ 标签 / Tags  
-✅ 归档 / Archive  
-✅ 评论 / Comment (Power by [Valine](https://valine.js.org/))  
-✅ 社交 / Sociaty Media  
-✅ 自定义导航 / Customer Navicate Link  
-✅ 文章阅读量 / UV/PU Counter  
-✅ 页脚古诗词 / Footer Poetry  
-☑️ 文章搜索 / Search   
-☑️ 多类型支持 / Type Support: Post, Album, Meme, 
-☑️ 文章索引 / Toc   
-
-
-## 🔧 设置 / Config
+## 🔧 主题设置
 
 配置 `docs/.vupress/config.js`
 
@@ -82,5 +68,6 @@ Modify the `/docs/.vuepress/config.js`
     }
 ```
 
+## 📝License
 
-
+爱咋咋用
