@@ -1,20 +1,26 @@
 {
   "name": "vuepress-theme-seeker",
-  "version": "0.0.1",
-  "description": "A vuepress theme",
+  "version": "1.0.0",
+  "description": "A colorful and simple vuepress theme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "WensonSmith",
+  "email": "wensonsmith@gmail.com",
   "license": "MIT",
   "dependencies": {
     "@vuepress/plugin-blog": "^1.2.4",
     "@vuepress/plugin-medium-zoom": "^1.0.2",
-    "@vuepress/plugin-google-analytics": "^1.0.2",
     "@vuepress/plugin-last-updated":"^1.0.2"
   },
   "devDependencies": {
     "vuepress": "^1.0.2"
+  },
+  "keywords": ["vuepress", "theme"],
+  "homepage": "https://github.com/wensonsmith/vuepress-theme-seeker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wensonsmith/vuepress-theme-seeker"
   }
 }

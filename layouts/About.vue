@@ -12,42 +12,21 @@
                     
                     <div class="friends clearfix">
                         <div class="friends__title">小伙伴</div>
-                        <div class="friends__item">
-                            <img class="friends__item-img" src="/favicon.ico" alt="">
+                        <a class="friends__item" href="https://acme.top" target="_blank" title="肆月之风">
+                            <svg class="friends__item-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 418.63 333.91"><g><g><path d="M252.75 0h-92.56L0 333.91h91.84L252.75 0zM269.12 26.34L220 125.31l24.56 46.98H196.5l-29.9 63.37h202.91L269.12 26.34zM383.04 262.71l35.59 71.2H118.9l35.59-71.2h228.55z"></path></g></g></svg>
                             <div class="friends__item-link">
-                                <div class="title">小伙伴</div>
-                                <div class="desc">欢迎交换友链~</div>
+                                <div class="title">肆月之风</div>
+                                <div class="desc">爱技术、爱分享~</div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="friends__item">
-                            <img class="friends__item-img" src="/favicon.ico" alt="">
+                        <a class="friends__item" href="https://youngxhui.top/links/" target="_blank" title="ISLAND">
+                            <img class="friends__item-img" src="https://youngxhui.top/images/me/avatar.png" alt="">
                             <div class="friends__item-link">
-                                <div class="title">小伙伴</div>
-                                <div class="desc">欢迎交换友链~</div>
+                                <div class="title">ISLAND</div>
+                                <div class="desc">youngxhui blog</div>
                             </div>
-                        </div>
-                        <div class="friends__item">
-                            <img class="friends__item-img" src="/favicon.ico" alt="">
-                            <div class="friends__item-link">
-                                <div class="title">小伙伴</div>
-                                <div class="desc">欢迎交换友链~</div>
-                            </div>
-                        </div>
-                        <div class="friends__item">
-                            <img class="friends__item-img" src="/favicon.ico" alt="">
-                            <div class="friends__item-link">
-                                <div class="title">小伙伴</div>
-                                <div class="desc">欢迎交换友链~</div>
-                            </div>
-                        </div>
-                        <div class="friends__item">
-                            <img class="friends__item-img" src="/favicon.ico" alt="">
-                            <div class="friends__item-link">
-                                <div class="title">小伙伴</div>
-                                <div class="desc">欢迎交换友链~</div>
-                            </div>
-                        </div>
+                        </a>
                         <div class="friends__item">
                             <img class="friends__item-img" src="/favicon.ico" alt="">
                             <div class="friends__item-link">
