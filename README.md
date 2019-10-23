@@ -17,7 +17,9 @@
 
 ## 🚧 安装
 
-⚠️ 尚未发布，还不能使用下面命令安装。 可以  git clone 进行使用。
+```
+npm i vuepress-theme-seeker
+```
 
 ## 🔧 主题设置
 
@@ -66,6 +68,27 @@
             ]
         },
     }
+```
+
+#### 友链设置
+
+在 `docs` 文件夹下面建立  `about/README.md`, 并写入下面 `frontmatter`
+
+```markdown
+---
+layout: About
+friends:
+    - name: 文森 | Wenson
+      link: https://iwenson.com
+      desc: 一生为一次发光
+      avatar: https://iwenson.com/avatar.jpg
+    - name: 友链名称
+      link: 友链地址
+      desc: 友链介绍
+      avatar: 友链头像
+---
+
+关于自己的介绍可以直接写在这里， MARKDOWN 语法
 ```
 
 ## 📝License
