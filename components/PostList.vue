@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import ArticleCard from "./cards/ArticleCard.vue";
-import AlbumCard from "./cards/AlbumCard.vue";
-import MurmurCard from "./cards/MurmurCard.vue";
+import ArticleCard from "./Cards/ArticleCard.vue";
+import AlbumCard from "./Cards/AlbumCard.vue";
+import MurmurCard from "./Cards/MurmurCard.vue";
 
 export default {
   name: "List",
