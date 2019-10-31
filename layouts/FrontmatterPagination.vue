@@ -28,7 +28,7 @@ export default {
         Pagination: () => import(/* webpackChunkName = "Pagination" */ '@theme/components/Pagination.vue'),
     },
     created(){
-        this.$page.frontmatter.title = 'hello world'
+        // this.$page.frontmatter.title = 'hello world'
     }
 }
 </script>
