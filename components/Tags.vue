@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 @import '../styles/config.styl'
 .tag
     background: linear-gradient(120deg, #ffffff 50%, $readMoreBgColor 0%);
