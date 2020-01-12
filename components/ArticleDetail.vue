@@ -33,4 +33,20 @@ export default {
 @require '../styles/config'
 .last-updated
     color $textColorLighter
+
+.content__default
+    p 
+        > a 
+            text-decoration: none;
+            color: $textColor;
+            margin: 0 5px;
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.2em;
+            background-position: 0 100%;
+            transition: background-size 0.1s ease-in;
+        
+            &:hover
+                color: $textColor;
+                background-size: 100% 100%;
 </style>
