@@ -16,7 +16,8 @@ export default {
   },
   computed: {
     dateString() {
-      return this.datetime ? this.friendlyTime(new Date(this.datetime.replace(/-/g, "/"))) : 'lost time'
+      const formatted = this.datetime.replace('T', ' ').substr(0, 19).replace(/-/g, "/")
+      return this.datetime ? this.friendlyTime(new Date(formatted)) : 'lost time'
     }
   },
   methods: {
