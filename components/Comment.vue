@@ -3,17 +3,24 @@
 </template>
 
 <script>
+window.AV = require('leancloud-storage')
+const Valine = require('valine')
+
 export default {
     mounted() {
-        setTimeout(() => {
+        this.initValine()
+    },
+    methods: {
+        initValine() {
             new Valine({
                 el: '#comments',
                 appId: this.$site.themeConfig.valine.appId,
                 appKey: this.$site.themeConfig.valine.appKey,
                 visitor: true,
                 recordIP: true,
+                path: window.location.pathname,
             })
-        }, 500);
+        }
     }
 }
 </script>
