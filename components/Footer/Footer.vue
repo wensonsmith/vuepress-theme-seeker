@@ -17,7 +17,7 @@
       <div class="page-right"></div>
       <div :class="['footer__shadow', gradient.class]"></div>
     </div>
-    <div class="footer__copyright" v-text="copyright"></div>
+    <div class="footer__copyright" ><span v-text="copyright"></span> | Powered by Vuepress | Theme <a target="_blank" href="https://github.com/wensonsmith/vuepress-theme-seeker">Seeker</a></div>
   </div>
 </template>
 
