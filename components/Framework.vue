@@ -13,8 +13,8 @@
     </div>
     
     <ClientOnly>
-    <slot name="comment"></slot>
-    <Footer/>
+      <slot name="comment"></slot>
+      <Footer/>
     </ClientOnly>
   </div>
 </template>

@@ -3,11 +3,10 @@
 </template>
 
 <script>
-window.AV = require('leancloud-storage')
-const Valine = require('valine')
-
 export default {
     mounted() {
+        window.AV = require('leancloud-storage')
+        const Valine = require('valine')
         this.initValine()
     },
     methods: {
