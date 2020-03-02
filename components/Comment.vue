@@ -6,7 +6,7 @@
 export default {
     mounted() {
         window.AV = require('leancloud-storage')
-        const Valine = require('valine')
+        window.Valine = require('valine')
         this.initValine()
     },
     methods: {
