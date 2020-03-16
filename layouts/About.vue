@@ -96,6 +96,7 @@ export default {
         padding: 1em 2em;
         margin-left: -5em;
         overflow scroll
+        max-width: 900px;
 
         &__title
             padding 1em 
